@@ -11,10 +11,12 @@ class App extends React.Component{
         this.setState({
             loggedIn : !this.state.loggedIn
         });
+
+        sessionStorage.setItem('isLoggedIn', true);
     }
     render(){
         let comp = <Login onclick={this.uiChangeHandler}/>;
-        if(this.state.loggedIn){
+        if(sessionStorage.getItem('isLoggedIn')){
             comp = <Layout />
         }
         return(
