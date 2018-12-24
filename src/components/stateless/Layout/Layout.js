@@ -17,6 +17,7 @@ class Layout extends React.Component {
                 <p>Dashboard</p>
                 <p>Footer</p>
                 <p>Testing Fork 1</p>
+                <p>Testing Fork 2</p>
             </Aux>
         );
    }
