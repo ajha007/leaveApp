@@ -16,8 +16,6 @@ class Layout extends React.Component {
                 <Navbar logout={this.logoutHandler} />
                 <Dashboard />
                 <p>Footer</p>
-                <h1>Fetch Upstream check</h1>
-                <h1>Fetch Upstream check again</h1>
             </Aux>
         );
    }
