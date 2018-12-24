@@ -15,7 +15,7 @@ const Navbar = props => {
                         </a>
                             <div className="d-flex order-lg-2 ml-auto">
                                 <div className="nav-item d-none d-md-flex">
-                                    <a href="https://github.com/tabler/tabler" className="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
+                                    <a href="javascript:void(0)" className="btn btn-sm btn-outline-primary" onClick={props.logout} >Logout</a>
                                 </div>
                                 <div className="dropdown d-none d-md-flex">
                                     <a className="nav-link icon" data-toggle="dropdown">
