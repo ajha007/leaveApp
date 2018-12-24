@@ -17,6 +17,7 @@ class Layout extends React.Component {
                 <Dashboard />
                 <p>Footer</p>
                 <h1>Fetch Upstream check</h1>
+                <h1>Fetch Upstream check again</h1>
             </Aux>
         );
    }
