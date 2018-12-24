@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../stateless/Layout/Layout';
 import Login from '../statefull/Login/Login';
 import Aux from '../../hoc/Auxi';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends React.Component{
     state={
@@ -20,9 +21,11 @@ class App extends React.Component{
             comp = <Layout />
         }
         return(
-            <Aux>
-                {comp}
-            </Aux>
+            <BrowserRouter>
+                <Aux>
+                    {comp}
+                </Aux>
+            </BrowserRouter>
         );
     }
 }
