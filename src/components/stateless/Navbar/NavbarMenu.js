@@ -12,11 +12,7 @@ const NavbarMenu = () => {
                             <li className="nav-item">
                                 <a href="./index.html" className="nav-link active"><i className="fe fe-home"></i> Home</a>
                             </li>
-                            <NavbarItem icon="fe fe-book-open" name="Address">
-                                <a href="./cards.html" className="dropdown-item ">Cards design</a>
-                                <a href="./charts.html" className="dropdown-item ">Charts</a>
-                                <a href="./pricing-cards.html" className="dropdown-item ">Pricing cards</a>
-                            </NavbarItem>
+                            <NavbarItem icon="fe fe-book-open" name="Address"></NavbarItem>
                             <NavbarItem icon="fe fe-calendar" name="Holidays"></NavbarItem>
                             <NavbarItem icon="fe fe-file" name="Leaves Management">
                                 <a href="./profile.html" className="dropdown-item ">Apply Leave</a>
