@@ -1,4 +1,5 @@
 import React from 'react';
+import Holidays from '../Holidays/Holidays';
 
 const Dashboard = () => {
     return(
@@ -37,6 +38,9 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-6 col-lg-3">
+                    <Holidays />        
                 </div>
                 <div class="row row-cards row-deck">
                     
