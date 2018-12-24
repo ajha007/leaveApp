@@ -16,6 +16,7 @@ class Layout extends React.Component {
                 <p>Sidebar</p>
                 <p>Dashboard</p>
                 <p>Footer</p>
+                <p>Testing Fork 1</p>
             </Aux>
         );
    }

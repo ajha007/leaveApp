@@ -80,6 +80,12 @@ class Login extends React.Component {
                                                 name="Remember me"
                                                 value="rememberMe"
                                             />
+                                        {/* <div class="form-group">
+                                            <label class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" />
+                                                    <span class="custom-control-label">Remember me</span>
+                                             </label>
+                                        </div> */}
                                             <div className="form-footer">
                                                 <button type="button" onClick={this.verifyLoginHandler} className="btn btn-primary btn-block">Sign in</button>
                                             </div>

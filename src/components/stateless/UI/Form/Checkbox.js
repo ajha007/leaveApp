@@ -5,7 +5,7 @@ const Checkbox = props => (
     <div className="form-group">
         <label className="custom-control custom-checkbox">
             <input type="checkbox" className="custom-control-input"/>
-            <span className="custom-control-label">{props.name}</span>
+            <span className="custom-control-label">Remember me</span>
         </label>
     </div>
 );
