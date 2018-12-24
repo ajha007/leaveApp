@@ -42,7 +42,12 @@ class Login extends React.Component {
         if(this.state.email === "nmahato@gmail.com" && this.state.password === "1234"){
             this.props.onclick();
         }else{
-            console.log("wrong credentials");
+            alert("wrong credentials");
+        }
+    }
+    submitFormOnEnterHandler = (e) => {
+        if (e.charCode == 13) {
+            this.verifyLoginHandler();
         }
     }
     render() {
@@ -51,7 +56,7 @@ class Login extends React.Component {
                 <div className="page-single">
                     <div className="container">
                         <div className="row">
-                            <div className="col col-login mx-auto">
+                            <div className="col col-login mx-auto" onKeyPress={this.submitFormOnEnterHandler}> 
                                 <div className="text-center mb-6">
                                     <img src={Logo} className="h-6" alt="" />
                                 </div>
