@@ -1,6 +1,7 @@
 import React from 'react';
 import Aux from '../../../hoc/Auxi';
 import Navbar from '../Navbar/Navbar';
+import Dashboard from '../Dashboard/Dashboard';
 
 class Layout extends React.Component {
 
@@ -13,11 +14,8 @@ class Layout extends React.Component {
         return (
             <Aux>
                 <Navbar logout={this.logoutHandler} />
-                <p>Sidebar</p>
-                <p>Dashboard</p>
+                <Dashboard />
                 <p>Footer</p>
-                <p>Testing Fork 1</p>
-                <p>Testing Fork 2</p>
             </Aux>
         );
    }
