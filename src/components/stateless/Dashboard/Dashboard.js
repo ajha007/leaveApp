@@ -7,12 +7,10 @@ const Dashboard = () => {
     return(
         <div className="my-3 my-md-5">
             <div className="container">
-                <div className="col-lg-12 col-md-12 col-sm-12">
 
                     <Route path="/" exact component={Home} />
-                    <Route path="/holidays" exact component={Holidays} />                
-
-                </div>
+                    <Route path="/holidays" exact component={Holidays} />
+                    
             </div>
         </div>
     );

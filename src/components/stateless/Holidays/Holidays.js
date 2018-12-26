@@ -122,12 +122,14 @@ const holidaysList = (props) =>{
 
 
     return (
-		<SortableTbl tblData={MyData}
-			tHead={tHead}
-			dKey={col}
-			search={true}
-			defaultCSS={true}
-        />
+		<div className="col-12">
+      <SortableTbl tblData={MyData}
+        tHead={tHead}
+        dKey={col}
+        search={true}
+        defaultCSS={true}
+          />
+    </div>
 
         // <Table style={{
         //     opacity: 0.8,

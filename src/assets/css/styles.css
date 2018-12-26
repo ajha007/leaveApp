@@ -566,6 +566,9 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+.custom-control-label {
+    position: static;
+}
 
 @media (min-width: 576px) {
   .container {
@@ -9839,7 +9842,7 @@ a.text-dark:hover, a.text-dark:focus {
   .table, .text-wrap table {
     border-collapse: collapse !important;
   }
-  
+
   .table td,
   .text-wrap table td, .table th, .text-wrap table th {
     background-color: #fff !important;
@@ -15473,7 +15476,7 @@ a.tag-addon:hover {
   vertical-align: bottom;
   font-style: normal;
 }
-/* 
+/*
 .browser-android-browser {
   background-image: url("../images/browsers/android-browser.svg");
 }
@@ -15556,7 +15559,7 @@ a.tag-addon:hover {
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
-/* 
+/*
 .flag-ad {
   background-image: url("../images/flags/ad.svg");
 }

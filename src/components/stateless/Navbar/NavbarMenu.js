@@ -1,10 +1,9 @@
 import React from 'react';
-import Navbar from './Navbar';
 import NavbarItem from './NavbarItem';
 
-const NavbarMenu = () => {
+const NavbarMenu = props => {
     return(
-        <div className="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+        <div className={`header collapse d-lg-flex p-0 ${props.show ? 'show' : ''}`} id="headerMenuCollapse">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg order-lg-first">
