@@ -13,7 +13,8 @@ class Layout extends React.Component {
    render(){
         return (
             <Aux>
-                <Navbar logout={this.logoutHandler} />
+                <Navbar logout={this.logoutHandler} profileLayout={this.props.profileApp}/>
+                {console.log(this.props.profileApp)}
                 <Dashboard />
                 <p>Footer</p>
             </Aux>

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../../../assets/css/styles.css';
 
-const Input = props => (
-    fsdf
+const Button = props => (
+    <input type="button" value="Submit"/>
 );
 
-export default Input;
+export default Button;

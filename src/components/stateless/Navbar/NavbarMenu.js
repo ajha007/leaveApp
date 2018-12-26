@@ -14,8 +14,8 @@ const NavbarMenu = props => {
                             <NavbarItem icon="fe fe-book-open" name="Address"></NavbarItem>
                             <NavbarItem icon="fe fe-calendar" name="Holidays" pageUrl="/holidays"></NavbarItem>
                             <NavbarItem icon="fe fe-file" name="Leaves Management">
-                                <a href="./profile.html" className="dropdown-item ">Apply Leave</a>
-                                <a href="./login.html" className="dropdown-item ">List of Leaves</a>
+                                <a href="/leave-apply" className="dropdown-item ">Apply Leave</a>
+                                <a href="#" className="dropdown-item">List of Leaves</a>
                             </NavbarItem>
                         </ul>
                     </div>

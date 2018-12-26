@@ -22,11 +22,12 @@ class Dropdown extends React.Component {
         });
     };
     render(){
+
         let ddownA = (<Auxi>
-            <span className="avatar" style={{ backgroundImage: `url(${avatar})` }}></span>
+            <span className="avatar" style={{ backgroundImage: `url(./profileImage/35.jpg)` }}></span>
             <span className="ml-2 d-none d-lg-block">
-                <span className="text-default">Jane Pearson</span>
-                <small className="text-muted d-block mt-1">Administrator</small>
+                <span className="text-default">{this.props.profileNavbar ? this.props.profileNavbar.name : ''}</span>
+                <small className="text-muted d-block mt-1">{this.props.profileNavbar ? this.props.profileNavbar.profile : ''}</small>
             </span>
         </Auxi>);
         if(this.props.type == "notification"){

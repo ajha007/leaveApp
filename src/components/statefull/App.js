@@ -6,19 +6,26 @@ import { BrowserRouter } from 'react-router-dom';
 
 class App extends React.Component{
     state={
-        loggedIn : false
+        loggedIn : false,
+        profile : null
     }
-    uiChangeHandler = () => {
+    uiChangeHandler = (obj) => {
+        console.log(obj);
         this.setState({
+            profile : obj,
             loggedIn : !this.state.loggedIn
         });
 
         sessionStorage.setItem('isLoggedIn', true);
     }
+    componentDidUpdate(){
+      console.log("updated--------");
+    }
     render(){
+      console.log( this.state.profile);
         let comp = <Login onclick={this.uiChangeHandler}/>;
         if(sessionStorage.getItem('isLoggedIn')){
-            comp = <Layout />
+            comp = <Layout profileApp={this.state.profile}/>
         }
         return(
             <BrowserRouter>

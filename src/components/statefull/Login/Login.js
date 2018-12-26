@@ -10,16 +10,17 @@ class Login extends React.Component {
         password : null,
         remember : false
     }
+
     setInputValueHandler = (event) => {
         let type = event.target.name;
 
         switch(type){
-            case 'email': 
+            case 'email':
                 this.setState({
                     email : event.target.value
                 });
                 break;
-            case 'password' : 
+            case 'password' :
                 this.setState({
                     password: event.target.value
                 });
@@ -39,11 +40,47 @@ class Login extends React.Component {
         }
     }
     verifyLoginHandler = () => {
-        if(this.state.email === "nmahato@gmail.com" && this.state.password === "1234"){
-            this.props.onclick();
-        }else{
-            alert("wrong credentials");
+      let profiles = [
+        {
+          id : 1,
+          name : 'Niladri Mahato',
+          profile : 'Associate Software Engineer',
+          email : 'nmahato@gmail.com',
+          password : '1234',
+          image : './profileImage/41.jpg'
+        },
+        {
+          id : 2,
+          name : 'Amit Jha',
+          profile : 'Software Developer',
+          email : 'ajha@gmail.com',
+          password : '1234',
+          image : './profileImage/35.jpg'
+        },
+        {
+          id : 3,
+          name : 'Sachin Tangoria',
+          profile : 'Account Manager',
+          email : 'stangoria@gmail.com',
+          password : '1234',
+          image : './profileImage/27.jpg'
+        },
+        {
+          id : 4,
+          name : 'Sanghamitra Roy',
+          profile : 'HR Admin',
+          email : 'sroy@gmail.com',
+          password : '1234',
+          image : './profileImage/19.jpg'
         }
+      ];
+        for(let i = 0 ; i < profiles.length ; i++ ){
+          if(this.state.email === profiles[i].email && this.state.password === profiles[i].password){
+              this.props.onclick(profiles[i]);
+              return 0;
+          }
+        }
+        alert("wrong credentials");
     }
     submitFormOnEnterHandler = (e) => {
         if (e.charCode === 13) {
@@ -56,7 +93,7 @@ class Login extends React.Component {
                 <div className="page-single">
                     <div className="container">
                         <div className="row">
-                            <div className="col col-login mx-auto" onKeyPress={this.submitFormOnEnterHandler}> 
+                            <div className="col col-login mx-auto" onKeyPress={this.submitFormOnEnterHandler}>
                                 <div className="text-center mb-6">
                                     <img src={Logo} className="h-6" alt="" />
                                 </div>
@@ -65,7 +102,7 @@ class Login extends React.Component {
                                             <div className="card-title">
                                                 Login to your account
                                             </div>
-                                            <Input 
+                                            <Input
                                                 label="Email Address"
                                                 pholder="Enter Email"
                                                 type="email"
@@ -81,7 +118,7 @@ class Login extends React.Component {
                                             >
                                                 <a href="./forgot-password.html" className="float-right small">I forgot password</a>
                                             </Input>
-                                            <Checkbox 
+                                            <Checkbox
                                                 name="Remember me"
                                                 value="rememberMe"
                                             />

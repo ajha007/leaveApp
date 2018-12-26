@@ -1,7 +1,7 @@
 import React from 'react';
 import Aux from '../../../hoc/Auxi';
 import '../../../assets/css/styles.css';
-import tabler from '../../../assets/images/brand/tabler.svg';
+import tabler from '../../../assets/images/brand/tabler.png';
 import avatar from '../../../assets/images/faces/male/41.jpg';
 import Dropdown from '../UI/Form/Dropdown';
 import NavbarMenu from './NavbarMenu';
@@ -16,6 +16,7 @@ class Navbar extends React.Component {
       });
     }
     render(){
+      console.log('Image ---- '+ this.props.profileLayout);
       return(
           <Aux>
               <div className="header py-4">
@@ -56,7 +57,8 @@ class Navbar extends React.Component {
                                       <div className="dropdown-divider"></div>
                                       <a href="#" className="dropdown-item text-center text-muted-dark">Mark all as read</a>
                                   </Dropdown>
-                                  <Dropdown  type="user_menu">
+
+                                  <Dropdown  type="user_menu" profileNavbar={this.props.profileLayout}>
                                       <a className="dropdown-item" href="#">
                                           <i className="dropdown-icon fe fe-user"></i> Profile
                                       </a>
