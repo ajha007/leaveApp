@@ -1,6 +1,6 @@
 import React from 'react';
 import SortableTbl from 'react-sort-search-table';
-import Table from 'react-responsive-data-table';
+// import Table from 'react-responsive-data-table';
 
 
 let MyData = 
@@ -62,40 +62,40 @@ const holidaysList = (props) =>{
 
 
     return (
-		// <SortableTbl tblData={MyData}
-		// 	tHead={tHead}
-		// 	dKey={col}
-		// 	search={true}
-		// 	defaultCSS={true}			
-        // />
+		<SortableTbl tblData={MyData}
+			tHead={tHead}
+			dKey={col}
+			search={true}
+			defaultCSS={true}			
+        />
         
-        <Table style={{
-            opacity: 0.8,
-            backgroundColor: "blue",
-            color: "#ffffff",
-            textAlign: "center"
-          }}
-          tableStyle="table table-hover table-striped table-bordered table-borderless table-responsive"
-          pages={true}
-          pagination={true}
-          onRowClick={() => {}} // if You Want Table Row Data OnClick then assign this {row => console.log(row)}
-          page={true}
-          errormsg="Error. . ."
-          loadingmsg="Loading. . ."
-          isLoading={false} 
-          sort={true} 
-          title="Customers"
-          search={true}
-          size={10}
-          data={{
-            head: {
-                id: "ID",
-                name: "Name",
-                date: "Date",
-                day: "Day At",
-            },
-            data:MyData
-          }} />
+        // <Table style={{
+        //     opacity: 0.8,
+        //     backgroundColor: "blue",
+        //     color: "#ffffff",
+        //     textAlign: "center"
+        //   }}
+        //   tableStyle="table table-hover table-striped table-bordered table-borderless table-responsive"
+        //   pages={true}
+        //   pagination={true}
+        //   onRowClick={() => {}} // if You Want Table Row Data OnClick then assign this {row => console.log(row)}
+        //   page={true}
+        //   errormsg="Error. . ."
+        //   loadingmsg="Loading. . ."
+        //   isLoading={false} 
+        //   sort={true} 
+        //   title="Customers"
+        //   search={true}
+        //   size={10}
+        //   data={{
+        //     head: {
+        //         id: "ID",
+        //         name: "Name",
+        //         date: "Date",
+        //         day: "Day At",
+        //     },
+        //     data:MyData
+        //   }} />
 );
 }
 
