@@ -1,164 +1,146 @@
 import React from 'react';
-import SortableTbl from 'react-sort-search-table';
-/*import Table from 'react-responsive-data-table';*/
+//import SortableTbl from 'react-sort-search-table';
+import { Table, Tr, Td } from "reactable";
+import Button from '../UI/Form/Button';
+// import Table from 'react-responsive-data-table';
 
 
-let MyData =
-[
-    {
-        "id"   : "srno_1",
-        "name"  : "New Year’s Day",
-        "date"  : "01 Jan 2019",
-        "day"   : "Tuesday",
-    },
-    {
-        "id"   : "srno_2",
-        "name"  : "Republic Day",
-        "date"  : "26 Jan 2019",
-        "day"   : "Saturday",
-    },
-    {
-        "id"   : "srno_3",
-        "name"  : "Holi",
-        "date"  : "21 Mar 2019",
-        "day"   : "Thursday",
-    },
-    {
-        "id"   : "srno_4",
-        "name"  : "Good Friday",
-        "date"  : "19 April 2019",
-        "day"   : "Friday",
-    },
-    {
-        "id"   : "srno_5",
-        "name"  : "Floating holiday: Any one Id-Ul- Fitre/Maha Navami/Goverdhan Puja/Guruparv",
-        "date"  : "5th June/7th Oct/28th Oct/12th Nov",
-        "day"   : "Wednesday/Monday/Monday/Tuesday",
-    },
-    {
-        "id"   : "srno_1",
-        "name"  : "New Year’s Day",
-        "date"  : "01 Jan 2019",
-        "day"   : "Tuesday",
-    },
-    {
-        "id"   : "srno_2",
-        "name"  : "Republic Day",
-        "date"  : "26 Jan 2019",
-        "day"   : "Saturday",
-    },
-    {
-        "id"   : "srno_3",
-        "name"  : "Holi",
-        "date"  : "21 Mar 2019",
-        "day"   : "Thursday",
-    },
-    {
-        "id"   : "srno_4",
-        "name"  : "Good Friday",
-        "date"  : "19 April 2019",
-        "day"   : "Friday",
-    },
-    {
-        "id"   : "srno_5",
-        "name"  : "Floating holiday: Any one Id-Ul- Fitre/Maha Navami/Goverdhan Puja/Guruparv",
-        "date"  : "5th June/7th Oct/28th Oct/12th Nov",
-        "day"   : "Wednesday/Monday/Monday/Tuesday",
-    },
-    {
-        "id"   : "srno_1",
-        "name"  : "New Year’s Day",
-        "date"  : "01 Jan 2019",
-        "day"   : "Tuesday",
-    },
-    {
-        "id"   : "srno_2",
-        "name"  : "Republic Day",
-        "date"  : "26 Jan 2019",
-        "day"   : "Saturday",
-    },
-    {
-        "id"   : "srno_3",
-        "name"  : "Holi",
-        "date"  : "21 Mar 2019",
-        "day"   : "Thursday",
-    },
-    {
-        "id"   : "srno_4",
-        "name"  : "Good Friday",
-        "date"  : "19 April 2019",
-        "day"   : "Friday",
-    },
-    {
-        "id"   : "srno_5",
-        "name"  : "Floating holiday: Any one Id-Ul- Fitre/Maha Navami/Goverdhan Puja/Guruparv",
-        "date"  : "5th June/7th Oct/28th Oct/12th Nov",
-        "day"   : "Wednesday",
-    }
+
+
+//const dataLength = MyData.length;
+
+
+const tableColumns = [
+    { title: 'ID', prop: 'id' },
+    { title: 'Holiday', prop: 'name' },
+    { title: 'Date', prop: 'date' },
+    { title: 'Day', prop: 'day' },
+  
 ];
 
-const header = [
-    {
-        id:"ID",
-        name: "Holiday",
-        date: "Date",
-        day: "Day"
+
+class Holidays extends React.Component {
+  
+    state = {
+        holidays :
+        [
+            {
+                "id"   : "1",
+                "name"  : "New Year’s Day",
+                "date"  : "01 Jan 2019",
+                "day"   : "Tuesday",
+                
+            },
+            {
+                "id"   : "2",
+                "name"  : "Republic Day",
+                "date"  : "26 Jan 2019",
+                "day"   : "Saturday",
+            },
+            {
+                "id"   : "3",
+                "name"  : "Holi",
+                "date"  : "21 Mar 2019",
+                "day"   : "Thursday",
+            },
+            {
+                "id"   : "4",
+                "name"  : "Good Friday",
+                "date"  : "19 April 2019",
+                "day"   : "Friday",
+            },
+            {
+                "id"   : "5",
+                "name"  : "Floating holiday: Any one Id-Ul- Fitre/Maha Navami/Goverdhan Puja/Guruparv",
+                "date"  : "5th June/7th Oct/28th Oct/12th Nov",
+                "day"   : "Wednesday/Monday/Monday/Tuesday",
+            },
+            {
+                "id"   : "6",
+                "name"  : "Independence Day",
+                "date"  : "15 Aug 2019",
+                "day"   : "Thursday",
+                "button": <Button />
+            },
+            {
+                "id"   : "7",
+                "name"  : "Mahatma Gandhi Birthday",
+                "date"  : "02 Oct 2019",
+                "day"   : "Wednesday",
+            },
+            {
+                "id"   : "8",
+                "name"  : "Dussehra",
+                "date"  : "08 Oct 2019",
+                "day"   : "Tuesday",
+            },
+            {
+                "id"   : "9",
+                "name"  : "Diwali",
+                "date"  : "27 Oct 2019",
+                "day"   : "Sunday",
+            },
+            {
+                "id"   : "10",
+                "name"  : "Christmas Day",
+                "date"  : "25 Dec 2019",
+                "day"   : "Wednesday",
+            },
+            {
+                "id"   : "11",
+                "name"  : "Respective B’ Day",
+                "date"  : "",
+                "day"   : "",
+            },
+            {
+                "id"   : "12",
+                "name"  : "Respective Anniversary Day",
+                "date"  : "",
+                "day"   : "",
+            },
+    
+    ]
     }
-];
-
-const holidaysList = (props) =>{
-	let col = [
-        "id",
-        "name",
-        "date",
-        "day",
-    ];
-	let tHead = [
-        "ID",
-        "Holiday",
-        "Date",
-        "Day",
-    ];
-
-
+    removeHandler = (index) => {
+        console.log(this.state.holidays);
+        this.state.holidays.splice(index, 1);
+    this.setState(this.state.holidays);
+    }
+	
+   render(){
     return (
 		<div className="col-12">
-      <SortableTbl tblData={MyData}
+      {/* <SortableTbl tblData={MyData}
         tHead={tHead}
         dKey={col}
         search={true}
         defaultCSS={true}
-          />
+          /> */}
+
+
+{/* <Table className="table" id="table" data={MyData}
+ itemsPerPage={15} 
+ pageButtonLimit={5}
+ filterable={['name', 'day', 'date']}
+ sortable={['name', 'date', 'day']} >
+    
+ </Table> */}
+ <Table className="table" id="table" itemsPerPage={5} >
+    {this.state.holidays.map(
+        (object, i) => <Tr key={i}>
+        <Td column="Sr. No.">{i+1}</Td>
+        <Td column="Name">{object.name}</Td>
+        <Td column="Date">{object.date}</Td>
+        <Td column="Day">{object.day}</Td>
+        <Td column="Remove"><button type="button" className="btn btn-danger ml-auto" onClick={this.removeHandler.bind(this, i)} >Remove</button></Td>
+        </Tr>
+        )}
+    </Table>,
     </div>
 
-        // <Table style={{
-        //     opacity: 0.8,
-        //     backgroundColor: "blue",
-        //     color: "#ffffff",
-        //     textAlign: "center"
-        //   }}
-        //   tableStyle="table table-hover table-striped table-bordered table-borderless table-responsive"
-        //   pages={true}
-        //   pagination={true}
-        //   onRowClick={() => {}} // if You Want Table Row Data OnClick then assign this {row => console.log(row)}
-        //   page={true}
-        //   errormsg="Error. . ."
-        //   loadingmsg="Loading. . ."
-        //   isLoading={false}
-        //   sort={true}
-        //   title="Customers"
-        //   search={true}
-        //   size={10}
-        //   data={{
-        //     head: {
-        //         id: "ID",
-        //         name: "Name",
-        //         date: "Date",
-        //         day: "Day At",
-        //     },
-        //     data:MyData
-        //   }} />
+       
 );
+    }
 }
 
-export default holidaysList;
+export default Holidays;

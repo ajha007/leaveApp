@@ -47,6 +47,32 @@ Dashboard UI
   box-sizing: border-box;
 }
 
+
+.reactable-page-button {
+  background-color: #289912;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.reactable-current-page {
+  background-color: darkgreen;
+}
+
+.reactable-previous-page {
+  
+    background-color: #c2c2c2;
+    padding: 4px;
+    margin-right: 10px;
+}
+
+.reactable-next-page {
+  
+  background-color: #c2c2c2;
+  padding: 4px;
+  margin-left: 4px;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
