@@ -10,10 +10,10 @@ const NavbarMenu = () => {
                     <div className="col-lg order-lg-first">
                         <ul className="nav nav-tabs border-0 flex-column flex-lg-row">
                             <li className="nav-item">
-                                <a href="./index.html" className="nav-link active"><i className="fe fe-home"></i> Home</a>
+                                <a href="/" className="nav-link active"><i className="fe fe-home"></i> Home</a>
                             </li>
                             <NavbarItem icon="fe fe-book-open" name="Address"></NavbarItem>
-                            <NavbarItem icon="fe fe-calendar" name="Holidays"></NavbarItem>
+                            <NavbarItem icon="fe fe-calendar" name="Holidays" pageUrl="/holidays"></NavbarItem>
                             <NavbarItem icon="fe fe-file" name="Leaves Management">
                                 <a href="./profile.html" className="dropdown-item ">Apply Leave</a>
                                 <a href="./login.html" className="dropdown-item ">List of Leaves</a>

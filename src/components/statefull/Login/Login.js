@@ -46,7 +46,7 @@ class Login extends React.Component {
         }
     }
     submitFormOnEnterHandler = (e) => {
-        if (e.charCode == 13) {
+        if (e.charCode === 13) {
             this.verifyLoginHandler();
         }
     }
