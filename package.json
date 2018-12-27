@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.23.0",
     "react": "^16.6.3",
+    "react-big-calendar": "^0.20.2",
     "react-dom": "^16.6.3",
     "react-onclickoutside": "^6.7.1",
     "react-responsive-data-table": "^1.0.4",

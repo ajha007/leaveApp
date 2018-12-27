@@ -1,7 +1,7 @@
 import React from 'react';
 import Aux from '../../../hoc/Auxi';
 import '../../../assets/css/styles.css';
-import tabler from '../../../assets/images/brand/tabler.png';
+import aapna from '../../../assets/images/brand/tabler.png';
 import avatar from '../../../assets/images/faces/male/41.jpg';
 import Dropdown from '../UI/Form/Dropdown';
 import NavbarMenu from './NavbarMenu';
@@ -15,15 +15,20 @@ class Navbar extends React.Component {
         show : !this.state.show
       });
     }
+    componentDidUpdate(){
+      console.log("Navbar.js: component did update");
+    }
+    componentWillUpdate(){
+      console.log("Navbar.js: component will update");
+    }
     render(){
-      console.log('Image ---- '+ this.props.profileLayout);
       return(
           <Aux>
               <div className="header py-4">
                   <div className="container">
                       <div className="d-flex">
                           <a className="header-brand" href="./index.html">
-                              <img src={tabler} className="header-brand-img" alt="tabler logo" />
+                              <img src={aapna} className="header-brand-img" alt="tabler logo" />
                           </a>
                               <div className="d-flex order-lg-2 ml-auto">
                                   <Dropdown type="notification">

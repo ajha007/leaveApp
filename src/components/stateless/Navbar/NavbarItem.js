@@ -1,5 +1,6 @@
 import React from 'react';
 import onClickOutside from "react-onclickoutside";
+import { NavLink } from 'react-router-dom';
 
 
 class NavbarItem extends React.Component {
@@ -17,8 +18,14 @@ class NavbarItem extends React.Component {
            show : false
        });
     };
+    componentDidUpdate(){
+      console.log("NavbarItem.js: component did update");
+    }
+    componentWillUpdate(){
+      console.log("NavbarItem.js: component will update");
+    }
    render(){
-        let pageLink = "javascript:void(0)";
+        let pageLink = "#";
 
         if(this.props.pageUrl)
         {
@@ -27,7 +34,7 @@ class NavbarItem extends React.Component {
 
        return (
            <li className="nav-item">
-               <a href={pageLink} className="nav-link" onClick={this.showSubMenuHandler} data-toggle="dropdown"><i className={this.props.icon}></i>{this.props.name}</a>
+               <NavLink to={pageLink} className="nav-link" onClick={this.showSubMenuHandler} data-toggle="dropdown"><i className={this.props.icon}></i>{this.props.name}</NavLink>
                <div className={`dropdown-menu dropdown-menu-arrow ${this.state.show && this.props.children!=null ? 'show' : null}`}>
                    {this.props.children}
                </div>
@@ -35,5 +42,4 @@ class NavbarItem extends React.Component {
        );
    }
 }
-
 export default onClickOutside(NavbarItem);

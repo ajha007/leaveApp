@@ -9,12 +9,16 @@ class Layout extends React.Component {
         sessionStorage.removeItem('isLoggedIn');
         window.location.reload();
     }
-
+    componentDidUpdate(){
+      console.log("Layout.js: component did update");
+    }
+    componentWillUpdate(){
+      console.log("Layout.js: component will update");
+    }
    render(){
         return (
             <Aux>
                 <Navbar logout={this.logoutHandler} profileLayout={this.props.profileApp}/>
-                {console.log(this.props.profileApp)}
                 <Dashboard />
                 <p>Footer</p>
             </Aux>

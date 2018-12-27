@@ -21,6 +21,12 @@ class Dropdown extends React.Component {
             show: false
         });
     };
+    componentDidUpdate(){
+      console.log("Dropdown.js: component did update");
+    }
+    componentWillUpdate(){
+      console.log("Dropdown.js: component will update");
+    }
     render(){
 
         let ddownA = (<Auxi>
