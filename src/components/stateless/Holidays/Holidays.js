@@ -125,7 +125,7 @@ class Holidays extends React.Component {
  sortable={['name', 'date', 'day']} >
     
  </Table> */}
- <Table className="table" id="table" itemsPerPage={5} >
+ <Table className="table" id="table" itemsPerPage={5} sortable={['Name', 'Date', 'Day', 'Sr. No.']} filterable={['Name', 'Date', 'Day']} >
     {this.state.holidays.map(
         (object, i) => <Tr key={i}>
         <Td column="Sr. No.">{i+1}</Td>

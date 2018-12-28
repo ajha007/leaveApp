@@ -11,7 +11,7 @@ const NavbarMenu = props => {
                             <li className="nav-item">
                                 <a href="/" className="nav-link active"><i className="fe fe-home"></i> Home</a>
                             </li>
-                            <NavbarItem icon="fe fe-book-open" name="Address"></NavbarItem>
+                            <NavbarItem icon="fe fe-book-open" name="Address" pageUrl="/address-book"></NavbarItem>
                             <NavbarItem icon="fe fe-calendar" name="Holidays" pageUrl="/holidays"></NavbarItem>
                             <NavbarItem icon="fe fe-file" name="Leaves Management">
                                 <a href="/leave-apply" className="dropdown-item ">Apply Leave</a>
