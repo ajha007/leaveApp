@@ -7,11 +7,9 @@ class LeavyApply extends React.Component{
     number_of_days : null,
     reason_for_leave : null,
     balance_leaves : 10,
-
-      error_start_date : false,
-      error_number_of_days : false,
-      error_reason_for_leave : false
-
+    error_start_date : false,
+    error_number_of_days : false,
+    error_reason_for_leave : false
   }
   setFormValuesToStateHandler = (e) => {
     switch(e.target.name){

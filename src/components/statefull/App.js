@@ -19,7 +19,10 @@ class App extends React.Component{
         sessionStorage.setItem('isLoggedIn', true);
     }
     componentDidUpdate(){
-      console.log("updated--------");
+      console.log("App.js: component did update");
+    }
+    componentWillUpdate(){
+      console.log("App.js: component will update");
     }
     render(){
       console.log( this.state.profile);

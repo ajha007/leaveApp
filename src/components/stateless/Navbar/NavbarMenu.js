@@ -1,5 +1,6 @@
 import React from 'react';
 import NavbarItem from './NavbarItem';
+import { NavLink } from 'react-router-dom';
 
 const NavbarMenu = props => {
     return(
@@ -9,12 +10,12 @@ const NavbarMenu = props => {
                     <div className="col-lg order-lg-first">
                         <ul className="nav nav-tabs border-0 flex-column flex-lg-row">
                             <li className="nav-item">
-                                <a href="/" className="nav-link active"><i className="fe fe-home"></i> Home</a>
+                                <NavLink to="/" className="nav-link" exact><i className="fe fe-home"></i>Home</NavLink>
                             </li>
                             <NavbarItem icon="fe fe-book-open" name="Address" pageUrl="/address-book"></NavbarItem>
                             <NavbarItem icon="fe fe-calendar" name="Holidays" pageUrl="/holidays"></NavbarItem>
                             <NavbarItem icon="fe fe-file" name="Leaves Management">
-                                <a href="/leave-apply" className="dropdown-item ">Apply Leave</a>
+                                <NavLink to="/leave-apply" className="dropdown-item ">Apply Leave</NavLink>
                                 <a href="#" className="dropdown-item">List of Leaves</a>
                             </NavbarItem>
                         </ul>
